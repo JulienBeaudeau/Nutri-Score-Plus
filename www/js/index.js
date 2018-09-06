@@ -39,12 +39,24 @@ var app = {
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
 
-        var NSPLoadingElement = parentElement.querySelector('.NSPLoading');
+		
+		
+		/*
+		var NSPLoadingElement = parentElement.querySelector('.NSPLoading');
         var NSPReadyElement = parentElement.querySelector('.NSPReady');
 
         NSPLoadingElement.setAttribute('style', 'display:none;');
         NSPReadyElement.setAttribute('style', 'display:block;');
-
+		*/
+		
+		var LoadScreen = document.getElementById('LoadScreen');
+		LoadScreen.setAttribute('style', 'display:none;');
+		
+		var MainScreen = document.getElementById('MainScreen');
+		MainScreen.setAttribute('style', 'display:block;');
+		
+		
         console.log('Received Event: ' + id);
+				
     }
 };
